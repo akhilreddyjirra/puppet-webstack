@@ -1,0 +1,8 @@
+<VirtualHost *:80>
+    ServerAdmin	<%= @adminemail %>
+    ServerName <%= @servername %>
+    ServerAlias www.<%= @servername %>
+    DocumentRoot /var/www/<%= @servername -%>/public_html/
+    ErrorLog /var/log/httpd//<%= @servername -%>/error.log
+    CustomLog /var/log/httpd/<%= @servername -%>/access.log combined
+</VirtualHost>
